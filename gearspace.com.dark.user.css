@@ -1,0 +1,136 @@
+/* ==UserStyle==
+@name           gearspace.com - 6/7/2022, 10:46:48 PM
+@namespace      github.com/frantick/GearspaceDarkUserCss
+@version        1.0.0
+@description    Dark style for Gearspace
+@author         Frantick
+@preprocessor stylus
+
+@var color mainBackground "Main background" "#242424"
+@var color alt1Background "Alternative background" "#2C2C2C"
+@var color alt2Background "Second alt background" "#363636"
+@var color mainFontColor "Main font color" "#8AA68A"
+@var color mainLinkFontColor "Link main color" "#AFC8BF"
+@var color secondLinkFontColor "Link hover color" "#809D6E"
+@var color borderColor "Border color" "#373737"
+==/UserStyle== */
+@-moz-document domain("gearspace.com") {
+    :root {
+        --backgroundColorMain: mainBackground;
+        --backgroundColorAlt: alt1Background;
+        --backgroundColorAlt2: alt2Background;
+        --fontColorMain: mainFontColor;
+        --fontColorLinkMain: mainLinkFontColor;
+        --fontColorLinkAlt: secondLinkFontColor;
+        --borderColor: borderColor;
+    }
+
+    body {
+        background: #111;
+    }
+
+    input {
+        background-color: var(--backgroundColorAlt2) !important;
+        color: var(--fontColorMain) !important;
+    }
+
+    .post_data {
+        background-color: var(--backgroundColorAlt) !important;
+        color: var(--fontColorMain) !important;
+    }
+
+    .bigusername,
+    .bsg-articles-container .article-review h1,
+    .bsg-articles-container .article-review.alt1,
+    .bsg-articles-container .articles,
+    .forum-container,
+    .forum-header,
+    .forum-bit-title,
+    .forum-bit-sub-forums,
+    .navbar-breadcrumbs,
+    .navbar_notice,
+    .notices-wrapper,
+    .no-query-message p,
+    .no-results-message li,
+    .no-results-message p,
+    .no-results-message ul,
+    .search-results-container,
+    .search-container,
+    div.search-options__container,
+    .search-options__option-group select,
+    input.search-options__option--date-selector,
+    select.searchbox__search-type,
+    .searchbox-container-outer,
+    .quicksearch,
+    .quicksearch-options,
+    .threads-list .thread-name,
+    .threads-list .thread-name h2,
+    .threads-list .thread-views span span,
+    .threads-list .thread-views,
+    .threads-list .thread-views > span,
+    .threads-list tbody tr,
+    .threads-list thead tr,
+    .threads-list td,
+    .threads-list td.read,
+    .threads-list td.thread-last-post,
+    .threads-list th.thread-last-post,
+    .threads-list .thread-name .thread-owner,
+    .threads-list .thread-name .thread-snippet,
+    .toptoolbar,
+    .user_data,
+    {
+        background: var(--backgroundColorMain) !important;
+        background-color: var(--backgroundColorMain) !important;
+        color: var(--fontColorMain) !important;
+    }
+
+    .navbar-breadcrumbs #mainBreadCrumb a,
+    .bsg-articles-container .article-review h1 a {
+        background-color: var(--backgroundColorMain) !important;
+        color: var(--fontColorLinkMain) !important;
+    }
+
+    a:link,
+    body_alink,
+    a:visited,
+    body_avisited {
+        color: var(--fontColorLinkMain) !important;
+    }
+
+    a:hover,
+    a:active,
+    body_ahover {
+        color: var(--fontColorLinkAlt) !important;
+        text-decoration: underline !important;
+    }
+
+    .alt1,
+    .alt1Active {
+        background: var(--backgroundColorAlt);
+        color: var(--fontColorMain);
+    }
+    .alt2,
+    .alt2Active {
+        background: var(--backgroundColorMain);
+        color: var(--fontColorMain);
+    }
+
+    .noticeBit,
+    .forum-bit-wrapper,
+    .threads-list thead tr,
+    .threads-list tbody tr {
+        background: var(--backgroundColorAlt2) !important;
+        border: solid 1px var(--borderColor) !important;
+        box-shadow: none;
+    }
+
+    .forum-nav {
+        border-top: 1px solid var(--backgroundColorAlt);
+        border-bottom: 1px solid var(--backgroundColorAlt);
+        background: var(--backgroundColorMain);
+    }
+
+    .quicksearch-options {
+        border: solid 1px var(--borderColor) !important;
+    }
+}
